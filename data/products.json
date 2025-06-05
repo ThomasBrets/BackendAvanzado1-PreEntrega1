@@ -5,6 +5,14 @@
     "titulo": "zapatilla",
     "descripcion": "zapa deportiva",
     "codigo": "zp001",
-    "precio": 200
+    "precio": 400
+  },
+  {
+    "id": "cc7fdbe5-cfa7-4a9f-826c-24ade11cf1c8",
+    "status": true,
+    "titulo": "zapatilla",
+    "descripcion": "zapa JORDAN",
+    "codigo": "zp002",
+    "precio": 350
   }
 ]

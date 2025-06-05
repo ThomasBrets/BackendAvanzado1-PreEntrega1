@@ -16,4 +16,16 @@ router.put("/:productId", ProductsController.updateProduct)
 router.delete("/:productId", ProductsController.deleteProduct)
 
 
+
+//? Complete Routes
+
+// GETPRODUCTS => http://localhost:8080/api/products/all-products
+// GETPRODUCTBYID => http://localhost:8080/api/products/f3f08615-ad39-46e0-8a78-3dc9329d75cb
+
+// ADDPRODUCT => http://localhost:8080/api/products/addProduct
+
+// UPDATEPRODUCT =>  http://localhost:8080/api/products/f3f08615-ad39-46e0-8a78-3dc9329d75cb
+
+
+
 module.exports = router

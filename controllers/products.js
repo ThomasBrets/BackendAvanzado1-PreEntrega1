@@ -11,7 +11,7 @@ class ProductsController {
 
   static async getProductById(req, res) {
     const { error, data } = await ProductsServices.getProductById(
-      req.params.id
+      req.params.productsId
     );
 
     return error
@@ -29,21 +29,21 @@ class ProductsController {
 
   static async updateProduct(req, res) {
     const { error, data } = await ProductsServices.updateProduct(
-      req.params.id,
+      req.params.productId,
       req.body
     );
 
     return error
       ? res.status(data.status || 500).json({ message: data })
-      : res.status(201).json(data);
+      : res.status(204).json(data);
   }
 
   static async deleteProduct(req, res) {
-    const { error, data } = await ProductsServices.deleteProduct(req.params.id);
+    const { error, data } = await ProductsServices.deleteProduct(req.params.productId);
 
     return error
       ? res.status(data.status || 500).json({ message: data })
-      : res.status(201).json(data);
+      : res.status(204).json(data);
   }
 }
 

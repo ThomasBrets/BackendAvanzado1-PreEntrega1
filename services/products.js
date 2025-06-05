@@ -30,7 +30,7 @@ class ProductsServices {
         };
       }
 
-      return { error: false, data: products };
+      return { error: false, data: product };
     } catch (error) {
       return { error: false, data: error.message };
     }
@@ -52,7 +52,7 @@ class ProductsServices {
     }
   }
 
-  static async addProduct(id, updateData) {
+  static async updateProduct(id, updateData) {
     try {
       const data = await fs.readFile(filePath, "utf-8");
       const products = JSON.parse(data);
@@ -79,7 +79,7 @@ class ProductsServices {
     }
   }
 
-  static async deleteProduct() {
+  static async deleteProduct(id) {
     try {
       const data = await fs.readFile(filePath, "utf-8");
       const products = JSON.parse(data);
