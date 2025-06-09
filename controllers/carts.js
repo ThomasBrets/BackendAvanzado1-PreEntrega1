@@ -17,8 +17,8 @@ class CartsController {
       : res.status(201).json(data);
   }
 
-  static async addProduct(req, res) {
-    const { error, data } = await CartsServices.addCart(
+  static async addProductToCart(req, res) {
+    const { error, data } = await CartsServices.addProductToCart(
       req.params.cartId,
       req.params.productId
     );
